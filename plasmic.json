@@ -1,0 +1,175 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "tDjtrzzZWsZ9KMtCu27ZC9",
+      "projectApiToken": "sdn94O5j6CvAhDZTYG6KHbsIKL5P33vRceQ3ANKcK5EukxceKHuh4yMROAqcedALChXhUMY4eFB2P1VPUg",
+      "projectName": "Design Course",
+      "version": "latest",
+      "cssFilePath": "plasmic/design_course/plasmic_design_course.module.css",
+      "components": [
+        {
+          "id": "Ijoy0b_Xmc",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "tDjtrzzZWsZ9KMtCu27ZC9",
+          "renderModuleFilePath": "plasmic/design_course/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/design_course/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "j7GGhPP3Qs",
+          "name": "Home",
+          "type": "managed",
+          "projectId": "tDjtrzzZWsZ9KMtCu27ZC9",
+          "renderModuleFilePath": "plasmic/design_course/PlasmicHome.tsx",
+          "importSpec": {
+            "modulePath": "../pages/home.tsx"
+          },
+          "cssFilePath": "plasmic/design_course/PlasmicHome.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "mRatVJbzMX",
+          "name": "OurWork",
+          "type": "managed",
+          "projectId": "tDjtrzzZWsZ9KMtCu27ZC9",
+          "renderModuleFilePath": "plasmic/design_course/PlasmicOurWork.tsx",
+          "importSpec": {
+            "modulePath": "../pages/our-work.tsx"
+          },
+          "cssFilePath": "plasmic/design_course/PlasmicOurWork.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "tB5XjRXn2B",
+          "name": "Services",
+          "type": "managed",
+          "projectId": "tDjtrzzZWsZ9KMtCu27ZC9",
+          "renderModuleFilePath": "plasmic/design_course/PlasmicServices.tsx",
+          "importSpec": {
+            "modulePath": "../pages/services.tsx"
+          },
+          "cssFilePath": "plasmic/design_course/PlasmicServices.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "IzCzcwrfjf",
+          "name": "Navbar",
+          "type": "managed",
+          "projectId": "tDjtrzzZWsZ9KMtCu27ZC9",
+          "renderModuleFilePath": "plasmic/design_course/PlasmicNavbar.tsx",
+          "importSpec": {
+            "modulePath": "Navbar.tsx"
+          },
+          "cssFilePath": "plasmic/design_course/PlasmicNavbar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        }
+      ],
+      "icons": [
+        {
+          "id": "UA-TyLtClo",
+          "name": "VectorIcon",
+          "moduleFilePath": "plasmic/design_course/icons/PlasmicIcon__Vector.tsx"
+        },
+        {
+          "id": "7O8tlaBSjx",
+          "name": "Vector1Icon",
+          "moduleFilePath": "plasmic/design_course/icons/PlasmicIcon__Vector1.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "FX-uuTyBc",
+          "name": "Home Page",
+          "filePath": "../public/plasmic/design_course/images/homePage.png"
+        },
+        {
+          "id": "A1lemRyQus",
+          "name": "streamline-icon-office-building@400x400 1",
+          "filePath": "../public/plasmic/design_course/images/streamlineIconOfficeBuilding400X4001.png"
+        },
+        {
+          "id": "mAUDCCo0um",
+          "name": "Frame 6",
+          "filePath": "../public/plasmic/design_course/images/frame6.svg"
+        },
+        {
+          "id": "Z0W0y8FzUQ",
+          "name": "Frame 7",
+          "filePath": "../public/plasmic/design_course/images/frame7.svg"
+        },
+        {
+          "id": "Z0Gnhf8oT",
+          "name": "Frame 8",
+          "filePath": "../public/plasmic/design_course/images/frame8.svg"
+        },
+        {
+          "id": "hAw7Ji0Fw1",
+          "name": "Frame 9",
+          "filePath": "../public/plasmic/design_course/images/frame9.svg"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "MOk_FyMsAMQ",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "fjoknNeYsxh",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ]
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "wjGmM7aF85Z",
+        "name": "Screen",
+        "projectId": "tDjtrzzZWsZ9KMtCu27ZC9",
+        "contextFilePath": "plasmic/design_course/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.300",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.300/dist/plasmic.schema.json"
+}
