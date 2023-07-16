@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -35,7 +35,7 @@
           "projectId": "tDjtrzzZWsZ9KMtCu27ZC9",
           "renderModuleFilePath": "plasmic/design_course/PlasmicHomepage.tsx",
           "importSpec": {
-            "modulePath": "../pages/index.tsx"
+            "modulePath": "../pages/homepage.tsx"
           },
           "cssFilePath": "plasmic/design_course/PlasmicHomepage.module.css",
           "scheme": "blackbox",
