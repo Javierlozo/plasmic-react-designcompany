@@ -21,3 +21,48 @@
 :where(.root > *) {
   grid-column: 4;
 }
+.navbar:global(.__wab_instance) {
+  position: absolute;
+  left: 129px;
+  top: 55px;
+}
+.img {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  object-position: center top;
+  height: 404px;
+  left: 0px;
+  top: 159px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.img > picture > img {
+  object-fit: cover;
+  object-position: center top;
+}
+.img > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+  object-position: center top;
+}
+.text__ar3D {
+  display: block;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(61, 151, 170, 1);
+  position: absolute;
+  top: 55px;
+  left: -260px;
+}
+.text___3GF0 {
+  position: absolute;
+  width: 1323px;
+  height: auto;
+  max-width: 100%;
+  left: -117px;
+  top: 638px;
+}

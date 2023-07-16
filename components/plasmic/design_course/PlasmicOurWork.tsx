@@ -56,6 +56,7 @@ export const PlasmicOurWork__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicOurWork__OverridesType = {
   root?: p.Flex<"div">;
+  text?: p.Flex<"div">;
   navbar?: p.Flex<typeof Navbar>;
 };
 
@@ -124,6 +125,17 @@ function PlasmicOurWork__RenderFunc(props: {
             sty.root
           )}
         >
+          <div
+            data-plasmic-name={"text"}
+            data-plasmic-override={overrides.text}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text
+            )}
+          >
+            {"DesignCourse"}
+          </div>
           <Navbar
             data-plasmic-name={"navbar"}
             data-plasmic-override={overrides.navbar}
@@ -136,7 +148,8 @@ function PlasmicOurWork__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navbar"],
+  root: ["root", "text", "navbar"],
+  text: ["text"],
   navbar: ["navbar"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -144,6 +157,7 @@ type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  text: "div";
   navbar: typeof Navbar;
 };
 
@@ -207,6 +221,7 @@ export const PlasmicOurWork = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    text: makeNodeComponent("text"),
     navbar: makeNodeComponent("navbar"),
 
     // Metadata about props expected for PlasmicOurWork

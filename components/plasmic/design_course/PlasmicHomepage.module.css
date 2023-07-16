@@ -26,7 +26,7 @@
 }
 .homePage {
   background: url("/plasmic/design_course/images/homePage.png") 0% 0% / 265px 265px repeat;
-  width: 2082px;
+  width: 1442px;
   height: 1029px;
   display: block;
   overflow: hidden;
@@ -68,6 +68,10 @@
   padding: 8px;
 }
 .navbar:global(.__wab_instance) {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 1;
   flex-shrink: 0;
 }
 .frame2 {

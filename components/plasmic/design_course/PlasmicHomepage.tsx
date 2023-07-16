@@ -181,6 +181,52 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.frame2}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.frame2)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["goToOurWork"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          destination: __wrapUserFunction(
+                            {
+                              type: "InteractionArgLoc",
+                              actionName: "navigation",
+                              interactionUuid: "vww2jS6DT",
+                              componentUuid: "Ijoy0b_Xmc",
+                              argName: "destination"
+                            },
+                            () => `/our-work`
+                          )
+                        };
+                        return __wrapUserFunction(
+                          {
+                            type: "InteractionLoc",
+                            actionName: "navigation",
+                            interactionUuid: "vww2jS6DT",
+                            componentUuid: "Ijoy0b_Xmc"
+                          },
+                          () =>
+                            (({ destination }) => {
+                              __nextRouter?.push(destination);
+                            })?.apply(null, [actionArgs]),
+                          actionArgs
+                        );
+                      })()
+                    : undefined;
+                  if (
+                    typeof $steps["goToOurWork"] === "object" &&
+                    typeof $steps["goToOurWork"].then === "function"
+                  ) {
+                    $steps["goToOurWork"] = await __wrapUserPromise(
+                      {
+                        type: "InteractionLoc",
+                        actionName: "navigation",
+                        interactionUuid: "vww2jS6DT",
+                        componentUuid: "Ijoy0b_Xmc"
+                      },
+                      $steps["goToOurWork"]
+                    );
+                  }
+                }}
               >
                 <div
                   className={classNames(

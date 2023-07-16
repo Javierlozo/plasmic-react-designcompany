@@ -36,6 +36,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import Navbar from "../../Navbar"; // plasmic-import: IzCzcwrfjf/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -55,6 +56,8 @@ export const PlasmicHome__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHome__OverridesType = {
   root?: p.Flex<"div">;
+  navbar?: p.Flex<typeof Navbar>;
+  img?: p.Flex<typeof p.PlasmicImg>;
 };
 
 export interface DefaultHomeProps {}
@@ -121,20 +124,71 @@ function PlasmicHome__RenderFunc(props: {
             projectcss.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <Navbar
+            data-plasmic-name={"navbar"}
+            data-plasmic-override={overrides.navbar}
+            className={classNames("__wab_instance", sty.navbar)}
+          />
+
+          <p.PlasmicImg
+            data-plasmic-name={"img"}
+            data-plasmic-override={overrides.img}
+            alt={""}
+            className={classNames(sty.img)}
+            displayHeight={"404px" as const}
+            displayMaxHeight={"none" as const}
+            displayMaxWidth={"100%" as const}
+            displayMinHeight={"0" as const}
+            displayMinWidth={"0" as const}
+            displayWidth={"100%" as const}
+            loading={"lazy" as const}
+            src={{
+              src: "/plasmic/design_course/images/picture1Jpg.jpg",
+              fullWidth: 3992,
+              fullHeight: 2242,
+              aspectRatio: undefined
+            }}
+          />
+
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__ar3D
+            )}
+          >
+            {"DesignCourse"}
+          </div>
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text___3GF0
+            )}
+          >
+            {
+              "We are a creative agency that specializes in providing design services to clients across various industries. Its core focus is on visual communication and creative problem-solving to deliver effective and aesthetically pleasing solutions. Design companies leverage their expertise in graphic design, web design, UX/UI design, branding, and other related fields to help businesses and organizations establish a strong visual identity and enhance their overall presence."
+            }
+          </div>
+        </div>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "navbar", "img"],
+  navbar: ["navbar"],
+  img: ["img"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  navbar: typeof Navbar;
+  img: typeof p.PlasmicImg;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -197,6 +251,8 @@ export const PlasmicHome = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    navbar: makeNodeComponent("navbar"),
+    img: makeNodeComponent("img"),
 
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,

@@ -36,6 +36,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import Navbar from "../../Navbar"; // plasmic-import: IzCzcwrfjf/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -55,6 +56,8 @@ export const PlasmicServices__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicServices__OverridesType = {
   root?: p.Flex<"div">;
+  text?: p.Flex<"div">;
+  navbar?: p.Flex<typeof Navbar>;
 };
 
 export interface DefaultServicesProps {}
@@ -121,20 +124,41 @@ function PlasmicServices__RenderFunc(props: {
             projectcss.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <div
+            data-plasmic-name={"text"}
+            data-plasmic-override={overrides.text}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text
+            )}
+          >
+            {"DesignCourse"}
+          </div>
+          <Navbar
+            data-plasmic-name={"navbar"}
+            data-plasmic-override={overrides.navbar}
+            className={classNames("__wab_instance", sty.navbar)}
+          />
+        </div>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "text", "navbar"],
+  text: ["text"],
+  navbar: ["navbar"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  text: "div";
+  navbar: typeof Navbar;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -197,6 +221,8 @@ export const PlasmicServices = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    text: makeNodeComponent("text"),
+    navbar: makeNodeComponent("navbar"),
 
     // Metadata about props expected for PlasmicServices
     internalVariantProps: PlasmicServices__VariantProps,

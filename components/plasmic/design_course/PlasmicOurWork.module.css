@@ -21,7 +21,21 @@
 :where(.root > *) {
   grid-column: 4;
 }
+.text {
+  display: block;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(61, 151, 170, 1);
+  position: absolute;
+  top: 87px;
+  left: -226px;
+}
 .navbar:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
+  position: absolute;
+  left: 165px;
+  top: 86px;
+  z-index: 1;
 }
